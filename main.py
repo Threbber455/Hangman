@@ -105,7 +105,7 @@ def turn(player, word=None, chances=7, guessed=None, joined="") -> None:
         turn(player)
         return
 
-    guess = input("Player " + player_to_string(get_alternate_player(player)) + "enter a letter or word you wish to "
+    guess = input("Player " + player_to_string(get_alternate_player(player)) + " enter a letter or word you wish to "
                                                                                "guess:")
 
     if len(str(guess)) > 1:
@@ -136,7 +136,7 @@ def turn(player, word=None, chances=7, guessed=None, joined="") -> None:
                 if check_word(word, joined):
                     print(board[chances])
                     print(joined)
-                    print("Player " + player_to_string(get_alternate_player(player)) + "has guessed the word "
+                    print("Player " + player_to_string(get_alternate_player(player)) + " has guessed the word "
                                                                                        "correctly.")
                     turn(get_alternate_player(player))
                 else:
